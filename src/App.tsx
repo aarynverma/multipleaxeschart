@@ -3,8 +3,6 @@ import * as ReactDom from "react-dom";
 import * as Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-// var newbaselinecost = baselinecost[0];
-
 const App = (props: HighchartsReact.Props) => {
   const [baselineCost, setBaselineCost] = React.useState<any>([]);
   const [actualCost, setActualCost] = React.useState<any>([]);
@@ -187,7 +185,7 @@ const App = (props: HighchartsReact.Props) => {
         yAxis: 1,
         data: baselineThm,
         tooltip: {
-          valueSuffix: "thm",
+          valueSuffix: " thm",
         },
       },
       {
@@ -197,7 +195,7 @@ const App = (props: HighchartsReact.Props) => {
         data: actualThm,
 
         tooltip: {
-          valueSuffix: "thm",
+          valueSuffix: " thm",
         },
       },
 
@@ -212,7 +210,7 @@ const App = (props: HighchartsReact.Props) => {
         },
         dashStyle: "shortdot",
         tooltip: {
-          valueSuffix: "$",
+          valueSuffix: " $",
         },
       },
       {
@@ -220,7 +218,7 @@ const App = (props: HighchartsReact.Props) => {
         type: "spline",
         data: actualCost,
         tooltip: {
-          valueSuffix: "$",
+          valueSuffix: " $",
         },
       },
     ],
@@ -275,7 +273,6 @@ const App = (props: HighchartsReact.Props) => {
   }, []);
 
   return (
-    // ye typescript with port 3001
     <HighchartsReact
       highcharts={Highcharts}
       options={options}
