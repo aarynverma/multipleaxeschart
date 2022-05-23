@@ -142,6 +142,12 @@ const App = (props: HighchartsReact.Props) => {
   };
 
   const options = {
+    title: {
+      text: "Assignment 2",
+    },
+    subtitle: {
+      text: "",
+    },
     xAxis: {
       categories: ["Jan", "Feb", "March", "April", "May", "June"],
     },
